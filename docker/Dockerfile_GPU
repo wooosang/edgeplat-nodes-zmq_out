@@ -1,0 +1,24 @@
+FROM registry.cn-hangzhou.aliyuncs.com/open-ys/playgroundpro_base_gpu:1.0
+
+
+ENV LD_LIBRARY_PATH=/opt/edgeplat/lib:/opt/onnxruntime/lib:/usr/lib/x86_64-linux-gnu:/opt/halcon/lib/x64-linux:/opt/edgeplat/libext
+RUN mkdir -p /opt/halcon && mkdir -p /opt/halcon/license /opt/halcon/lib /opt/halcon/include
+COPY license/* /opt/halcon/license/
+COPY include.tar.gz /opt/halcon/include/
+COPY lib/x64-linux /opt/halcon/lib/x64-linux/
+RUN echo 'HALCONARCH=x64-linux; export HALCONARCH \nHALCONROOT=/opt/halcon; export HALCONROOT \nHALCONEXAMPLES=${HALCONROOT}/examples; export HALCONEXAMPLES \nHALCONIMAGES=${HALCONROOT}/examples/images; export HALCONIMAGES \n PATH=${HALCONROOT}/bin/${HALCONARCH}:${HALCONROOT}/FLEXlm/${HALCONARCH}:${PATH}\nexport PATH\nif [ ${LD_LIBRARY_PATH} ] ; then\nLD_LIBRARY_PATH=${HALCONROOT}/lib/${HALCONARCH}:${LD_LIBRARY_PATH}\nexport LD_LIBRARY_PATH\nelse\nLD_LIBRARY_PATH=${HALCONROOT}/lib/${HALCONARCH}; export LD_LIBRARY_PATH\nfi\nif [ "x${FLEXID_LIBRARY_PATH}" = "x" ]; then\nFLEXID_LIBRARY_PATH="${HALCONROOT}/FLEXlm/${HALCONARCH}/flexid9:/usr/lib"\nexport FLEXID_LIBRARY_PATH\nfi\nexport LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lib:/usr/lib/x86_64-linux-gun/cudart:/lib:/usr/lib/x86_64-linux-gun/nvrtc\nexport LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lib:/usr/lib/x86_64-linux-gnu/blas:/lib:/usr/lib/x86_64-linux-gnu/lapack' >> ~/.bashrc
+RUN /bin/bash -c "source ~/.bashrc"
+RUN apt install -y vim gdb
+
+
+COPY edgeplat_lib/* /opt/edgeplat/lib/
+ADD defect_checker /app/checker
+WORKDIR /app
+COPY edgeplat_lib/libccd.so /app/
+COPY edgeplat_lib/libccd.so /lib/
+COPY matching /app/
+RUN chmod +x /app/matching
+CMD ["cat", "$LD_LIBRARY_PATH"]
+ENV HALCONROOT=/opt/halcon
+#ENTRYPOINT ["/app/matching"]
+ENTRYPOINT ["/app/checker", "-p", "8080"]

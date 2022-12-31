@@ -1,0 +1,79 @@
+{
+	"imageHeight": 950,
+	"imageName": "0.jpg",
+	"imagePath": "/home/ubuntu/work/edgeplat/defect_checker/test/models/10000",
+	"imageWidth": 1920,
+	"shapes": [
+		{
+			"lable": "0_1",
+			"lableHeight": 179,
+			"lableNumber": 1,
+			"lableWidth": 352,
+			"coordinate": [
+				"131",
+				"1438",
+				"310",
+				"1790"
+			],
+			"points": [
+				"131",
+				"1438"
+			]
+			"shapeType": "rect"
+		},
+
+		{
+			"lable": "0_2",
+			"lableHeight": 167,
+			"lableNumber": 1,
+			"lableWidth": 336,
+			"points": [
+				"770",
+				"1393",
+				"937",
+				"1729"
+			],
+			"shapeType": "rect"
+		},
+
+		{
+			"lable": "0_wenzi",
+			"lableHeight": 821,
+			"lableNumber": 1,
+			"lableWidth": 552,
+			"points": [
+				"120",
+				"375",
+				"925",
+				"830"
+			],
+			"shapeType": "rect"
+		},
+		{
+			"lable": "0_log",
+			"lableHeight": 422,
+			"lableNumber": 2,
+			"lableWidth": 514,
+			"points": [
+				"368",
+				"866",
+				"790",
+				"1380"
+			],
+			"shapeType": "rect"
+		},
+		{
+			"lable": "0_biaoqian",
+			"lableHeight": 335,
+			"lableNumber": 3,
+			"lableWidth": 258,
+			"points": [
+				"407",
+				"1565",
+				"742",
+				"1807"
+			],
+			"shapeType": "rect"
+		}
+	]
+}

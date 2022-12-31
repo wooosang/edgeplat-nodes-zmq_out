@@ -1,0 +1,59 @@
+{
+	"imageHeight": 900,
+	"imageName": "1.jpg",
+	"imagePath": "/home/ubuntu/work/edgeplat/defect_checker/test/models/10000",
+	"imageWidth": 480,
+  "shapes": [
+    {
+      "lable": "5_1",
+      "lableHeight": 133,
+      "lableNumber": 1,
+      "lableWidth": 245,
+      "coordinate": [
+        66,
+        123,
+        199,
+        368
+      ],
+      "points": [
+        "66",
+        "123"
+      ],
+      "shapeType": "rect"
+    },
+    {
+      "lable": "5_2",
+      "lableHeight": 447,
+      "lableNumber": 2,
+      "lableWidth": 126,
+      "coordinate": [
+        208,
+        177,
+        655,
+        303
+      ],
+      "points": [
+        "208",
+        "177"
+      ],
+      "shapeType": "rect"
+    },
+    {
+      "lable": "5_3",
+      "lableHeight": 140,
+      "lableNumber": 3,
+      "lableWidth": 240,
+      "coordinate": [
+        666,
+        120,
+        806,
+        360
+      ],
+      "points": [
+        "666",
+        "120"
+      ],
+      "shapeType": "rect"
+    }
+  ]
+}

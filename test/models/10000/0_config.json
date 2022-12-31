@@ -1,0 +1,279 @@
+{
+
+  "area": [
+
+    {
+      "name": "area1",
+      "modelFuction": {
+        "name": "template",
+        "template_FirstError": "255",
+        "template_NumLevel": "4",
+        "template_Optimize": "sort",
+        "template_GrayValues": "original",
+
+        "ncc_NumLevel": "auto",
+        "ncc_AngleStart": "0",
+        "ncc_AngleExtent": "0",
+        "ncc_AngleStart2": "auto",
+        "ncc_Metric": "use_polarity",
+
+        "shape_NumLevel": "auto",
+        "shape_AngleStart": "0",
+        "shape_AngleExtent": "0",
+        "shape_AngleStart2": "auto",
+        "shape_Optimization": "auto",
+        "Metric": "use_polarity",
+        "shape_ContrastValue": "20",
+        "shape_MinContrastValue": "10"
+      },
+      "matchFuction": {
+        "name": "template",
+        "ncc_AngtleSart": "0",
+        "ncc_AngleExtent": "0",
+        "ncc_MinScore": "0.5",
+        "ncc_NumMatches": "1",
+        "ncc_MaxOverlap": "0.5",
+        "ncc_SubPixel": "true",
+        "ncc_NumLevel": "0",
+
+        "template_MaxError": "30",
+        "template_SubPixel": "false",
+        "template_NumLevel": "4",
+        "template_WhichLevel": "2",
+
+        "shape_AngtleSart": "0",
+        "shape_AngleExtent": "0",
+        "shape_MinScore": "0.5",
+        "shape_NumMatches": "1",
+        "shape_MaxOverlap": "0.5",
+        "shape_SubPixel": "true",
+        "shape_NumLevel": "1",
+        "shape_Greedines": "0.5",
+
+        "ncc_standScore": "0.7",
+        "template_standScore": "256",
+        "shape_standScore": "0.7"
+      }
+    },
+
+    {
+      "name": "area2",
+      "modelFuction": {
+        "name": "ncc",
+        "template_FirstError": "255",
+        "template_NumLevel": "4",
+        "template_Optimize": "sort",
+        "template_GrayValues": "original",
+
+        "ncc_NumLevel": "auto",
+        "ncc_AngleStart": "0",
+        "ncc_AngleExtent": "0",
+        "ncc_AngleStart2": "auto",
+        "ncc_Metric": "use_polarity",
+
+        "shape_NumLevel": "auto",
+        "shape_AngleStart": "0",
+        "shape_AngleExtent": "0",
+        "shape_AngleStart2": "auto",
+        "shape_Optimization": "auto",
+        "Metric": "use_polarity",
+        "shape_ContrastValue": "20",
+        "shape_MinContrastValue": "10"
+      },
+      "matchFuction": {
+        "name": "ncc",
+        "ncc_AngtleSart": "0",
+        "ncc_AngleExtent": "0",
+        "ncc_MinScore": "0.5",
+        "ncc_NumMatches": "1",
+        "ncc_MaxOverlap": "0.5",
+        "ncc_SubPixel": "true",
+        "ncc_NumLevel": "0",
+
+        "template_MaxError": "30",
+        "template_SubPixel": "false",
+        "template_NumLevel": "auto",
+        "template_WhichLevel": "all",
+
+        "shape_AngtleSart": "0",
+        "shape_AngleExtent": "0",
+        "shape_MinScore": "0.5",
+        "shape_NumMatches": "1",
+        "shape_MaxOverlap": "0.5",
+        "shape_SubPixel": "true",
+        "shape_NumLevel": "1",
+        "shape_Greedines": "0.5",
+
+        "ncc_standScore": "0.7",
+        "template_standScore": "26",
+        "shape_standScore": "0.7"
+      }
+    },
+
+    {
+      "name": "area3",
+      "modelFuction": {
+        "name": "ncc",
+        "template_FirstError": "255",
+        "template_NumLevel": "4",
+        "template_Optimize": "sort",
+        "template_GrayValues": "original",
+
+        "ncc_NumLevel": "auto",
+        "ncc_AngleStart": "0",
+        "ncc_AngleExtent": "0",
+        "ncc_AngleStart2": "auto",
+        "ncc_Metric": "use_polarity",
+
+        "shape_NumLevel": "auto",
+        "shape_AngleStart": "0",
+        "shape_AngleExtent": "0",
+        "shape_AngleStart2": "auto",
+        "shape_Optimization": "auto",
+        "Metric": "use_polarity",
+        "shape_ContrastValue": "20",
+        "shape_MinContrastValue": "10"
+      },
+      "matchFuction": {
+        "name": "ncc",
+        "ncc_AngtleSart": "0",
+        "ncc_AngleExtent": "0",
+        "ncc_MinScore": "0.5",
+        "ncc_NumMatches": "1",
+        "ncc_MaxOverlap": "0.5",
+        "ncc_SubPixel": "true",
+        "ncc_NumLevel": "0",
+
+        "template_MaxError": "30",
+        "template_SubPixel": "false",
+        "template_NumLevel": "auto",
+        "template_WhichLevel": "all",
+
+        "shape_AngtleSart": "0",
+        "shape_AngleExtent": "0",
+        "shape_MinScore": "0.5",
+        "shape_NumMatches": "1",
+        "shape_MaxOverlap": "0.5",
+        "shape_SubPixel": "true",
+        "shape_NumLevel": "1",
+        "shape_Greedines": "0.5",
+
+        "ncc_standScore": "0.7",
+        "template_standScore": "26",
+        "shape_standScore": "0.7"
+      }
+
+    },
+
+    {
+      "name": "area4",
+      "modelFuction": {
+        "name": "ncc",
+        "template_FirstError": "255",
+        "template_NumLevel": "4",
+        "template_Optimize": "sort",
+        "template_GrayValues": "original",
+
+        "ncc_NumLevel": "auto",
+        "ncc_AngleStart": "0",
+        "ncc_AngleExtent": "0",
+        "ncc_AngleStart2": "auto",
+        "ncc_Metric": "use_polarity",
+
+        "shape_NumLevel": "auto",
+        "shape_AngleStart": "0",
+        "shape_AngleExtent": "0",
+        "shape_AngleStart2": "auto",
+        "shape_Optimization": "auto",
+        "Metric": "use_polarity",
+        "shape_ContrastValue": "20",
+        "shape_MinContrastValue": "10"
+      },
+      "matchFuction": {
+        "name": "ncc",
+        "ncc_AngtleSart": "0",
+        "ncc_AngleExtent": "0",
+        "ncc_MinScore": "0.5",
+        "ncc_NumMatches": "1",
+        "ncc_MaxOverlap": "0.5",
+        "ncc_SubPixel": "true",
+        "ncc_NumLevel": "0",
+
+        "template_MaxError": "30",
+        "template_SubPixel": "false",
+        "template_NumLevel": "auto",
+        "template_WhichLevel": "all",
+
+        "shape_AngtleSart": "0",
+        "shape_AngleExtent": "0",
+        "shape_MinScore": "0.5",
+        "shape_NumMatches": "1",
+        "shape_MaxOverlap": "0.5",
+        "shape_SubPixel": "true",
+        "shape_NumLevel": "1",
+        "shape_Greedines": "0.5",
+
+        "ncc_standScore": "0.7",
+        "template_standScore": "26",
+        "shape_standScore": "0.7"
+      }
+
+    },
+    {
+      "name": "area5",
+      "modelFuction": {
+        "name": "ncc",
+        "template_FirstError": "255",
+        "template_NumLevel": "4",
+        "template_Optimize": "sort",
+        "template_GrayValues": "original",
+
+        "ncc_NumLevel": "auto",
+        "ncc_AngleStart": "0",
+        "ncc_AngleExtent": "0",
+        "ncc_AngleStart2": "auto",
+        "ncc_Metric": "use_polarity",
+
+        "shape_NumLevel": "auto",
+        "shape_AngleStart": "0",
+        "shape_AngleExtent": "0",
+        "shape_AngleStart2": "auto",
+        "shape_Optimization": "auto",
+        "Metric": "use_polarity",
+        "shape_ContrastValue": "20",
+        "shape_MinContrastValue": "10"
+      },
+      "matchFuction": {
+        "name": "ncc",
+        "ncc_AngtleSart": "0",
+        "ncc_AngleExtent": "0",
+        "ncc_MinScore": "0.5",
+        "ncc_NumMatches": "1",
+        "ncc_MaxOverlap": "0.5",
+        "ncc_SubPixel": "true",
+        "ncc_NumLevel": "0",
+
+        "template_MaxError": "30",
+        "template_SubPixel": "false",
+        "template_NumLevel": "auto",
+        "template_WhichLevel": "all",
+
+        "shape_AngtleSart": "0",
+        "shape_AngleExtent": "0",
+        "shape_MinScore": "0.5",
+        "shape_NumMatches": "1",
+        "shape_MaxOverlap": "0.5",
+        "shape_SubPixel": "true",
+        "shape_NumLevel": "1",
+        "shape_Greedines": "0.5",
+
+        "ncc_standScore": "0.7",
+        "template_standScore": "26",
+        "shape_standScore": "0.7"
+      }
+
+    }
+
+  ]
+
+}
