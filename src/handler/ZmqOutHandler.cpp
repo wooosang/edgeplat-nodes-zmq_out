@@ -13,11 +13,6 @@
 #include <sys/stat.h>
 
 using namespace std;
-using namespace cv;
-int nreleaseEngines();
-int initEnv(string base_dir, char* prd_id, int logOut, int computeMode);
-string nievaluate(const string md_prd_id, cv::Mat &img);
-
 
 ZmqOutHandler::ZmqOutHandler(){
 	printf("ZmqOutHandler init.\n");
