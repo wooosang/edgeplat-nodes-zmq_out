@@ -28,7 +28,7 @@ struct data_frame{
     friend QDebug operator<<(QDebug debug, const data_frame &dataFrame)
     {
         QDebugStateSaver saver(debug);
-        debug.nospace() << dataFrame.context << Qt::endl;
+        debug.nospace() << dataFrame.context << endl;
         return debug;
     }
 };

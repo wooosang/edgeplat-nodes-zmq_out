@@ -26,7 +26,7 @@ endif()
 #set(Qt_DIR ${PROJECT_SOURCE_DIR}/include/qt)
 #set(Qt5_DIR /Users/woosang/Qt5.9.7/5.9.7/clang_64/lib/cmake/Qt5)
 #   specific the cmake-prefix-path of qt5
-set(CMAKE_PREFIX_PATH /Users/woosang/Qt5.9.7/5.9.7/clang_64/lib/cmake)
+set(CMAKE_PREFIX_PATH /home/ubuntu/work/edgeplat/nodes/edgeplat-nodes-zmq_out/include/qt/lib/cmake)
 #set(Qt5Core_DIR ${PROJECT_SOURCE_DIR}/include/qt/lib/cmake/Qt5Core)
 
 include_directories(${PROJECT_SOURCE_DIR}/include/qt/include)

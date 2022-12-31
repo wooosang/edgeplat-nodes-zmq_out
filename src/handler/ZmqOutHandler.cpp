@@ -51,9 +51,9 @@ QByteArray ZmqOutHandler::doHandle(data_frame *df, bool & isOk){
 	qint64 qBeginCheckUnix = time_begin_check.tv_sec * 1000000000 + time_begin_check.tv_nsec;
 	qint64 qPrepareEvlCost = qBeginCheckUnix - qGetDataUnix;
 	dataMap["prepare_evaluate_cost"] = qPrepareEvlCost / 1000000;
-	long long st = getCurrentTimeMsec();
-	long long ed = getCurrentTimeMsec();
-	printf(" Evaluate total time=%llu ms \n", ed - st);
+//	long long st = getCurrentTimeMsec();
+//	long long ed = getCurrentTimeMsec();
+//	printf(" Evaluate total time=%llu ms \n", ed - st);
 	
 	struct timespec time_node_end;
 	(void) clock_gettime(CLOCK_REALTIME, &time_node_end);

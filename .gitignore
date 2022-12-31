@@ -14,8 +14,8 @@ CMakeFiles
 Debug
 *.cmake
 include/qt
-defect_checker_autogen
 logs/*
 Makefile
 **/*.onnx
-defect_checker
+zmq_out_autogen
+zmq_out

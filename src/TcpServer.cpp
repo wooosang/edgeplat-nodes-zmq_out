@@ -10,6 +10,7 @@
 #include <QtCore/QDataStream>
 #include <QtCore/QFile>
 #include <algorithm>
+#include "handler/ZmqOutHandler.h"
 
 using namespace std;
 extern bool _stop=false;
@@ -47,7 +48,7 @@ TcpServer::TcpServer(int tcp_port)
 
  BaseHandler* TcpServer::initHandler(){
     printf("Being init handler.\n");
-    CheckHandler *handler = new CheckHandler();
+    ZmqOutHandler *handler = new ZmqOutHandler();
     handler->setSubscriberSocks(subscribers_sockets);
     printf("Handler init succeed!\n");
     return handler;
