@@ -17,6 +17,5 @@ include/qt
 defect_checker_autogen
 logs/*
 Makefile
-*.txt
 **/*.onnx
 defect_checker
