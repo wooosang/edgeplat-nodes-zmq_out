@@ -1,14 +1,17 @@
-#include <opencv2/opencv.hpp>
+//#include <opencv2/opencv.hpp>
 #include "QtCore/QSaveFile"
 #include "QtCore/QDir"
 #include <ctime>
 
+/*
 qint64 getTimeStamp(){
     struct timespec time_now;
     (void) clock_gettime(CLOCK_REALTIME, &time_now);
     qint64 qUnix = time_now.tv_sec * 1000000000 + time_now.tv_nsec;
     return qUnix;
 }
+*/
+ 
 
 std::string timestr() {
        //std::stringstream strm; strm << t; return strm.str();
@@ -43,5 +46,6 @@ int saveImage(QString filename, QByteArray image){
           file.write(image);
           // Calling commit() is mandatory, otherwise nothing will be written.
           file.commit();
+          return 0;
   }
 

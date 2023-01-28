@@ -29,9 +29,7 @@ void TcpServer::init_command_map(){
 TcpServer::TcpServer(int tcp_port)
 {
     QObject::connect(this, SIGNAL(close()), this, SLOT(closeServer()));
-
     m_server = new QTcpServer;
-    
     bool b_listen = m_server->listen(QHostAddress::Any, tcp_port);
     if(b_listen){
         std::cout << "Start listen on port "<<tcp_port<<" succeed!"<<std::endl;

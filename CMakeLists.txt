@@ -20,15 +20,16 @@ elseif(CMAKE_HOST_WIN32)
 
  
 else()
-	message("current platform: unkonw ")
+	message("current platform: unkonwn ")
 endif()
 
 #set(Qt_DIR ${PROJECT_SOURCE_DIR}/include/qt)
 #set(Qt5_DIR /Users/woosang/Qt5.9.7/5.9.7/clang_64/lib/cmake/Qt5)
 #   specific the cmake-prefix-path of qt5
-set(CMAKE_PREFIX_PATH /home/ubuntu/work/edgeplat/nodes/edgeplat-nodes-zmq_out/include/qt/lib/cmake)
+set(CMAKE_PREFIX_PATH D:/Qt/Qt5.14.2/5.14.2/msvc2017_64/lib/cmake)
 #set(Qt5Core_DIR ${PROJECT_SOURCE_DIR}/include/qt/lib/cmake/Qt5Core)
 
+include_directories(D:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include)
 include_directories(${PROJECT_SOURCE_DIR}/include/qt/include)
 include_directories(${PROJECT_SOURCE_DIR}/include/rabbitmq-c)
 include_directories(${PROJECT_SOURCE_DIR}/include/zmq)
@@ -36,7 +37,8 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 include_directories(/usr/local/include)
 
 link_directories(${PROJECT_SOURCE_DIR}/lib)
-link_directories(${PROJECT_SOURCE_DIR}/include/qt/lib)
+#link_directories(${PROJECT_SOURCE_DIR}/include/qt/lib)
+link_directories(D:/Qt/Qt5.14.2/5.14.2/msvc2017_64/lib)
 link_directories(${PROJECT_SOURCE_DIR}/include/zmq)
 
 find_package(Qt5Core)

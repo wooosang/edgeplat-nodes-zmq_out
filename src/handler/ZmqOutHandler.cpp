@@ -7,10 +7,11 @@
 #include <QtCore/QJsonDocument>
 #include "spdlog/spdlog.h"
 #include <QtConcurrent/QtConcurrent>
-#include <sys/time.h>
+//#include <sys/time.h>
 #include <QtCore/QDateTime>
 #include "tools.hpp"
 #include <sys/stat.h>
+#include <chrono>
 
 using namespace std;
 
@@ -34,26 +35,18 @@ void ZmqOutHandler::setSubscriberSocks(std::vector<void *> &sub_socks){
 
 QByteArray ZmqOutHandler::doHandle(data_frame *df, bool & isOk){
 	QVariantMap dataMap;
-	qint64 qGetDataUnix = getTimeStamp();
+    auto start = std::chrono::high_resolution_clock::now();
 	
     if(!(df->image.isNull())){
         std::cout << std::endl << "Received image bytes length:" <<  df->image.length() << std::endl;
     }
     
     string check_result = "";
-	struct timespec time_begin_check;
-	(void) clock_gettime(CLOCK_REALTIME, &time_begin_check);
-	qint64 qBeginCheckUnix = time_begin_check.tv_sec * 1000000000 + time_begin_check.tv_nsec;
-	qint64 qPrepareEvlCost = qBeginCheckUnix - qGetDataUnix;
-	dataMap["prepare_evaluate_cost"] = qPrepareEvlCost / 1000000;
-//	long long st = getCurrentTimeMsec();
-//	long long ed = getCurrentTimeMsec();
-//	printf(" Evaluate total time=%llu ms \n", ed - st);
-	
-	struct timespec time_node_end;
-	(void) clock_gettime(CLOCK_REALTIME, &time_node_end);
-	qint64 qNodeEndUnix = time_node_end.tv_sec * 1000000000 + time_node_end.tv_nsec;
-	dataMap["node_check_end"] = qNodeEndUnix;
+
+    auto end = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<float> duration = end - start;
+    printf("Duration : %f", duration.count());
+	dataMap["node_check_end"] = duration.count();
 
 	QJsonDocument jdoc = QJsonDocument::fromVariant(dataMap);
 	QByteArray data;
@@ -67,7 +60,7 @@ void ZmqOutHandler::handle(data_frame *df){
     bool isOk = true;
     QByteArray data = doHandle(df, isOk);
     std::cout << "Subscribers: " << subscribers_sockets->size() << std::endl;
-    if(data != NULL && subscribers_sockets != NULL && !subscribers_sockets->empty()){
+    if(!data.isNull() && subscribers_sockets != NULL && !subscribers_sockets->empty()){
         std::cout << "Ready to push to subscribers: " << subscribers_sockets->size() << std::endl;
         for (int i = 0; i < subscribers_sockets->size(); ++i) {
                 void *sub_sock = subscribers_sockets->at(i);

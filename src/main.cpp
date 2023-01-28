@@ -14,8 +14,8 @@
 
 //#include <g3log/g3log.hpp>
 //#include <g3log/logworker.hpp>
-
 //using namespace g3;
+
 TcpServer *tcpServer;
 
 void startListen(int port)
@@ -127,7 +127,6 @@ int main(int argc, char* argv[])
     startListen(port);
 
     SPDLOG_INFO("Spdlog version {}.{}.{}", SPDLOG_VER_MAJOR,SPDLOG_VER_MINOR,SPDLOG_VER_PATCH);
-    SPDLOG_WARN("Prepare to start listen.");
     // spdlog::enable_backtrace(10); //创建一个环形buffer可以容纳10个消息
     // spdlog::dump_backtrace(); //开始记日志
     SPDLOG_INFO("Node started.");

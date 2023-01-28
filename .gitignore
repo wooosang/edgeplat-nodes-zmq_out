@@ -19,3 +19,4 @@ Makefile
 **/*.onnx
 zmq_out_autogen
 zmq_out
+*.sln
